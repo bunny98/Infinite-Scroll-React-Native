@@ -13,7 +13,7 @@ const HomeScreen = () => {
             <FlatList
                 showsVerticalScrollIndicator={false}
                 onEndReached={addListItem}
-                onEndReachedThreshold={0.8}
+                onEndReachedThreshold={0.5}
                 data={data}
                 keyExtractor={item => item.title}
                 renderItem={({ item }) => {
@@ -39,9 +39,10 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
     image: {
-        height: 200,
-        width: 340,
+        height:200, 
+        width:340,
         margin: 10,
+        alignSelf : 'center',
         borderRadius: 10,
     },
     horizontalView: {
